@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head th:substituteby="layout/partials/head" />
+
+<body>
+	<header th:substituteby="layout/partials/header" />
+	<div class="container-fluid" style="margin-top: 60px;">
+      <div class="row-fluid">
+        <div class="span3">
+			<div th:substituteby="layout/partials/sidebar" /> 
+        </div><!--/span-->
+        <div class="span9">
+			<div th:substituteby="${templateName}" />          
+        </div><!--/span-->
+      </div><!--/row-->
+    </div>
+	<footer th:substituteby="layout/partials/footer" />
+</body>
+</html>

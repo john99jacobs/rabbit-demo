@@ -1,0 +1,15 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" th:href="@{'/'}">RabbitMQ Demo</a>
+		  <div class="nav-collapse collapse" >
+		  	<ul class="nav" th:remove="all">
+		  		<li><a th:href="@{'/'}">Site Home Page</a></li>
+		  	</ul>
+		    <p class="navbar-text pull-right">
+		      Current Server: <span th:text="${currentServerName}" />
+		    </p>
+		  </div>
+		</div>
+	</div>
+</div>

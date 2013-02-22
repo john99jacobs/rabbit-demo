@@ -1,0 +1,35 @@
+<div th:remove="tag">
+    <div class="row-fluid">
+        <div class="span9">
+            <h2 th:text="'Evict Entries'"></h2>
+        </div>
+    </div>
+    <div class="row-fluid" th:if="${message}">
+        <span class="span9 text-success" th:utext="${message}"></span>
+    </div>
+    <div class="row-fluid">
+        <form method="POST" th:action="@{'/evict'}">
+            <div class="span9">
+                <h3>Evict some entries from the cache</h3>
+                <br />
+            <div class="span9">
+                <h3>How Many Evictions?</h3>
+                <input type="text" name="batchSize" th:value="${batchSize}" />
+                <br />
+                <input class="btn btn-success" type="submit" value="Run " />
+            </div>
+            </div>
+        </form>
+    </div>
+    <div class="row-fluid">
+        <form method="POST" th:action="@{'/evictAll'}">
+            <div class="span9">
+                <h3>Evict all entries from the cache</h3>
+                <br />
+            <div class="span6">
+                <input class="btn btn-success" type="submit" value="Evict All " />
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
